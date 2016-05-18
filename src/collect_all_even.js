@@ -7,13 +7,13 @@ function buildSameElement(collection_a, object_b){
     var same = [];
 
     collection_a.forEach(function (coll_a) {
-        same = buildA(same,coll_a,object_b);
+        same = findSameElement(same,coll_a,object_b);
     });
 
     return same;
 }
 
-function buildA(same,coll_a,object_b) {
+function findSameElement(same,coll_a,object_b) {
     for (var i = 0; i < object_b.value.length; i++) {
         if (coll_a.key === object_b.value[i]) {
             same.push(coll_a.key);
